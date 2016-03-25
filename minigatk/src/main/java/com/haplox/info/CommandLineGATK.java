@@ -40,27 +40,6 @@ import org.broadinstitute.gatk.utils.text.TextFormattingUtils;
 
 import java.util.*;
 
-/**
- * All command line parameters accepted by all tools in the GATK.
- *
- * <h3>Info for end users</h3>
- *
- * <p>This is a list of options and parameters that are generally available to all tools in the GATK.</p>
- *
- * <p>There may be a few restrictions, which are indicated in individual argument descriptions. For example the -BQSR
- * argument is only meant to be used with a subset of tools, and the -pedigree argument will only be effectively used
- * by a subset of tools as well. Some arguments conflict with others, and some conversely are dependent on others. This
- * is all indicated in the detailed argument descriptions, so be sure to read those in their entirety rather than just
- * skimming the one-line summary in the table.</p>
- *
- * <h3>Info for developers</h3>
- *
- * <p>This class is the GATK engine itself, which manages map/reduce data access and runs walkers.</p>
- *
- * <p>We run command line GATK programs using this class. It gets the command line args, parses them, and hands the
- * gatk all the parsed out information. Pretty much anything dealing with the underlying system should go here;
- * the GATK engine should deal with any data related information.</p>
- */
 @DocumentedGATKFeature(groupName = HelpConstants.DOCS_CAT_ENGINE)
 public class CommandLineGATK extends CommandLineExecutable {
     /**

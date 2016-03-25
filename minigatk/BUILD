@@ -27,11 +27,6 @@ java_import(
     jars = ["deps/gatk-engine-3.5.jar"]
 )
 
-maven_server(
-    name = "junit",
-    artifact="junit:junit-3.8.2.jar"
-)
-
 
 java_library(
     name = "greeter",
