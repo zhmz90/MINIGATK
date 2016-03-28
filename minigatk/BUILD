@@ -1,35 +1,38 @@
-java_binary(
-    name = "myApp",
-    srcs = glob(["**/*App.java"]),
-    main_class = "com.haplox.info.App",
-    deps = [":greeter"],
-)
 
 java_binary(
-    name = "mini",
-    srcs = glob(["**/*.java"]),
-    main_class = "com.haplox.info.CommandLineGATK.java",
-    deps = [":gatk"]
+    name = "zero",
+    srcs = glob(["**/*CommandLineProgram_.java","**/*ParsingEngine_.java",
+                 "**/*Argument.java","**/*Output.java"]),
+    main_class = "com.haplox.info.CommandLineProgram_",
+    deps = [":log4j",":commons_io",":cofoja",":commandline"]
+)
+
+
+java_import(
+    name = "log4j",
+    jars = ["deps/apache-log4j-1.2.17/log4j-1.2.17.jar"]
+)
+java_import(
+    name = "cofoja",
+    jars = ["deps/cofoja-1.3-20160207.jar"]
 )
 
 java_import(
-    name = "gatk",
-    jars = ["deps/GenomeAnalysisTK.jar"]
+    name = "commons_io",
+    jars = ["deps/commons-io-2.4/commons-io-2.4.jar"]
 )
 
 java_import(
-    name = "gatk-utils",
-    jars = ["deps/gatk-utils-3.5.jar"]
+    name = "log4j_api",
+    jars = ["deps/apache-log4j-2.5-bin/log4j-api-2.5.jar"]
 )
-
 java_import(
-    name = "gatk-engine",
-    jars = ["deps/gatk-engine-3.5.jar"]
+    name = "log4j_core",
+    jars = ["deps/apache-log4j-2.5-bin/log4j-core-2.5.jar"]
 )
-
 
 java_library(
-    name = "greeter",
+    name = "commandline",
     srcs = ["src/main/java/com/haplox/info/Greeting.java"],
     visibility = ["//src/main/java/com/haplox/info/cmdline:__pkg__"]
 )

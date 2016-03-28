@@ -26,22 +26,6 @@
 package com.haplox.info;
 
 import org.apache.log4j.Logger;
-import org.broadinstitute.gatk.utils.commandline.ArgumentTypeDescriptor;
-import org.broadinstitute.gatk.utils.commandline.CommandLineProgram;
-import org.broadinstitute.gatk.engine.arguments.GATKArgumentCollection;
-import org.broadinstitute.gatk.utils.sam.SAMReaderID;
-import org.broadinstitute.gatk.engine.filters.ReadFilter;
-import org.broadinstitute.gatk.engine.io.stubs.OutputStreamArgumentTypeDescriptor;
-import org.broadinstitute.gatk.engine.io.stubs.SAMFileWriterArgumentTypeDescriptor;
-import org.broadinstitute.gatk.engine.io.stubs.VCFWriterArgumentTypeDescriptor;
-import org.broadinstitute.gatk.engine.phonehome.GATKRunReport;
-import org.broadinstitute.gatk.utils.refdata.utils.RMDTriplet;
-import org.broadinstitute.gatk.engine.walkers.Walker;
-import org.broadinstitute.gatk.engine.crypt.CryptUtils;
-import org.broadinstitute.gatk.engine.crypt.GATKKey;
-import org.broadinstitute.gatk.utils.exceptions.UserException;
-import org.broadinstitute.gatk.utils.text.ListFileUtils;
-
 import java.security.PublicKey;
 import java.util.ArrayList;
 import java.util.Arrays;

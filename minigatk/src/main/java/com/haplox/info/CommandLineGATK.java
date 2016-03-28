@@ -25,19 +25,6 @@
 
 package com.haplox.info;
 
-import htsjdk.samtools.SAMException;
-import htsjdk.tribble.TribbleException;
-import org.broadinstitute.gatk.utils.commandline.Argument;
-import org.broadinstitute.gatk.utils.commandline.ArgumentCollection;
-import org.broadinstitute.gatk.utils.commandline.CommandLineProgram;
-import org.broadinstitute.gatk.engine.arguments.GATKArgumentCollection;
-import org.broadinstitute.gatk.utils.refdata.tracks.FeatureManager;
-import org.broadinstitute.gatk.engine.walkers.Attribution;
-import org.broadinstitute.gatk.engine.walkers.Walker;
-import org.broadinstitute.gatk.utils.exceptions.UserException;
-import org.broadinstitute.gatk.utils.help.*;
-import org.broadinstitute.gatk.utils.text.TextFormattingUtils;
-
 import java.util.*;
 
 @DocumentedGATKFeature(groupName = HelpConstants.DOCS_CAT_ENGINE)
@@ -84,17 +71,6 @@ public class CommandLineGATK extends CommandLineExecutable {
             CommandLineGATK instance = new CommandLineGATK();
             start(instance, argv);
             System.exit(CommandLineProgram.result); // todo -- this is a painful hack
-        } catch (UserException e) {
-            exitSystemWithUserError(e);
-        } catch (TribbleException e) {
-            // We can generate Tribble Exceptions in weird places when e.g. VCF genotype fields are
-            //   lazy loaded, so they aren't caught elsewhere and made into User Exceptions
-            exitSystemWithUserError(e);
-        } catch (SAMException e) {
-            checkForMaskedUserErrors(e);
-            exitSystemWithSamError(e);
-        } catch (OutOfMemoryError e) {
-            exitSystemWithUserError(new UserException.NotEnoughMemory());
         } catch (Throwable t) {
             checkForMaskedUserErrors(t);
             exitSystemWithError(t);
@@ -110,9 +86,6 @@ public class CommandLineGATK extends CommandLineExecutable {
         // masked out of memory error
         if ( t instanceof OutOfMemoryError )
             exitSystemWithUserError(new UserException.NotEnoughMemory());
-        // masked user error
-        if ( t instanceof UserException || t instanceof TribbleException )
-            exitSystemWithUserError(new UserException(t.getMessage()));
 
         // no message means no masked error
         final String message = t.getMessage();

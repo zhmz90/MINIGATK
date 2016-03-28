@@ -1,0 +1,25 @@
+-classpath
+'/haplox/users/guo/Github/MINIGATK/minigatk/deps/apache-log4j-1.2.17/target/classes:/home/guo/.m2/repository/javax/mail/mail/1.4.3/mail-1.4.3.jar:/home/guo/.m2/repository/org/apache/geronimo/specs/geronimo-jms_1.1_spec/1.0/geronimo-jms_1.1_spec-1.0.jar:/home/guo/.m2/repository/javax/activation/activation/1.1/activation-1.1.jar:/home/guo/.m2/repository/org/apache/openejb/javaee-api/5.0-2/javaee-api-5.0-2.jar'
+-encoding
+'UTF-8'
+-protected
+-sourcepath
+'/haplox/users/guo/Github/MINIGATK/minigatk/deps/apache-log4j-1.2.17/src/main/java:/haplox/users/guo/Github/MINIGATK/minigatk/deps/apache-log4j-1.2.17/src/main/javadoc'
+-author
+-bottom
+'Copyright &#169; 1999-2016 <a href="http://www.apache.org">Apache Software Foundation</a>. All Rights Reserved.'
+-charset
+'UTF-8'
+-d
+'/haplox/users/guo/Github/MINIGATK/minigatk/deps/apache-log4j-1.2.17/target/apidocs'
+-docencoding
+'UTF-8'
+-docfilessubdirs
+-doctitle
+'Apache Log4j 1.2.17 API'
+-excludedocfilessubdir
+'.svn'
+-use
+-version
+-windowtitle
+'Apache Log4j 1.2.17 API'

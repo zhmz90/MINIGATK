@@ -1,6 +1,11 @@
 maven_jar(
-    name = "log4j",
-    artifact = "com.apache.log4j:log4j:1.2.15",
+    name = "log4j_api",
+    artifact = "com.apache.logging.log4j:log4j-api:2.5",
+)
+
+maven_jar(
+    name = "log4j_core",
+    artifact = "com.apache.logging.log4j:log4j-core:2.5",
 )
 
 maven_server(
