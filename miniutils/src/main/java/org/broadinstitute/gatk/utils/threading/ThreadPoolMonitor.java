@@ -61,7 +61,8 @@ public class ThreadPoolMonitor implements Runnable {
             wait();
         }
         catch( InterruptedException ex ) {
-            logger.error("ThreadPoolMonitor interrupted:" + ex.getStackTrace());
+	    //           logger.error("ThreadPoolMonitor interrupted:" + Arrays.toString(ex.getStackTrace()));
+            //logger.error("ThreadPoolMonitor interrupted:" + ex.getStackTrace());
             throw new RuntimeException("ThreadPoolMonitor interrupted", ex);
         }
     }

@@ -140,15 +140,20 @@ public class SequenceDictionaryUtils {
 
                 String msg = "Found contigs with the same name but different lengths";
                 String contig1  = "  contig  " + name1 + " is named " + elt1.getSequenceName()  + " with length " + Integer.toString(elt1.getSequenceLength());
+		/*
                 if ( elt1.getMd5() != null )
                     contig1 += " and MD5 " + elt1.getMd5();
+		*/
                 String contig2  = "  contig  " + name2 + " is named " + elt2.getSequenceName()  + " with length " + Integer.toString(elt2.getSequenceLength());
+		/*
                 if ( elt2.getMd5() != null )
                     contig2 += " and MD5 " + elt2.getMd5();
                 if ( elt1.getMd5() != null ||  elt2.getMd5() != null )
                     msg += " or MD5s:";
                 msg += "\n" + contig1 + "\n" + contig2;
-
+		*/
+		msg = "_zhmz90_";
+		contig2 += " and MD5 " + "elt1.getMd5()";
                 // todo -- replace with toString when SAMSequenceRecord has a nice toString routine
                 final UserException ex = new UserException.IncompatibleSequenceDictionaries(msg, name1, dict1, name2, dict2);
 
@@ -304,12 +309,14 @@ public class SequenceDictionaryUtils {
             return false;
 
          // compare MD5
+	/*
          if ( record1.getMd5() != null && record2.getMd5() != null ){
             final BigInteger firstMd5 = new BigInteger(record1.getMd5(), 16);
             final BigInteger secondMd5 = new BigInteger(record2.getMd5(), 16);
             if ( !firstMd5.equals(secondMd5) )
                 return false;
-       }
+		}
+	*/
 
         return true;
     }

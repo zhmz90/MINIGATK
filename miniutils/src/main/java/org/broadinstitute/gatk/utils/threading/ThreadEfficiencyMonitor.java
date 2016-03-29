@@ -83,7 +83,7 @@ public class ThreadEfficiencyMonitor {
 
         // initialize times to 0
         for ( final State state : State.values() )
-            times.put(state, 0l);
+            times.put(state, 0L);
     }
 
     private static long nanoToMilli(final long timeInNano) {

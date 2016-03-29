@@ -39,6 +39,7 @@ public class NamedThreadFactory implements ThreadFactory {
     static int id = 0;
     final String format;
 
+    @SuppressWarnings("ReturnValueIgnored")
     public NamedThreadFactory(String format) {
         this.format = format;
         String.format(format, id); // test the name

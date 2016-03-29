@@ -304,7 +304,7 @@ public class MannWhitneyU {
     @Requires({"observed != null","dominator != null","observed.size() > 0"})
     @Ensures({"result >= 0"})
     public static long calculateOneSidedU(TreeSet<Pair<Number,USet>> observed,USet dominator) {
-        long otherBeforeDominator = 0l;
+        long otherBeforeDominator = 0L;
         int otherSeenSoFar = 0;
         for ( Pair<Number,USet> dataPoint : observed ) {
             if ( dataPoint.second != dominator ) {

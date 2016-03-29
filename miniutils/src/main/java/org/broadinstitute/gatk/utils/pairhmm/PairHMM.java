@@ -81,7 +81,7 @@ public abstract class PairHMM {
         /* For testing only, set bit beyond hardware capabilities */
         TEST_BEYOND_CAPABILITIES(0x400L, true),
         /* Enable all implementations */
-        ENABLE_ALL(0xFFFFFFFFFFFFFFFFl, false);
+        ENABLE_ALL(0xFFFFFFFFFFFFFFFFL, false);
 
         /* Masks for machine capabilities */
         private final long mask;

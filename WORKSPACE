@@ -1,6 +1,6 @@
 maven_jar(
     name = "reflections",
-    artifact = "org.reflections:reflections:0.9.9",
+    artifact = "org.reflections:reflections:0.9.9-RC1",
 )
 maven_jar(
     name = "cofoja",
@@ -11,6 +11,12 @@ maven_jar(
     name = "log4j",
     artifact = "log4j:log4j:1.2.17",
 )
+
+maven_jar(
+    name = "slf4j",
+    artifact = "org.slf4j:slf4j-api:1.7.12",
+)
+
 maven_jar(
     name = "commons_io",
     artifact = "commons-io:commons-io:2.4",
@@ -60,5 +66,15 @@ maven_jar(
 
 maven_jar(
     name = "jna",
-    artifact = "com.sun.jna:jna:3.0.9",
+    artifact = "net.java.dev.jna:jna:4.1.0",
+)
+
+maven_jar(
+    name = "commons_collections",
+    artifact = "commons-collections:commons-collections:3.2.2",
+)
+
+maven_jar(
+    name = "htsjdk",
+    artifact = "com.github.samtools:htsjdk:2.1.1",
 )

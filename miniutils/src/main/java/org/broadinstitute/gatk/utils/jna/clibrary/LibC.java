@@ -171,11 +171,11 @@ public class LibC {
      */
     public static native int unsetenv(String name) throws LastErrorException;
 
-    public static class timeval extends Structure {
-        public static class ByReference extends timeval implements Structure.ByReference {
+    public static abstract class timeval extends Structure {
+        public static abstract class ByReference extends timeval implements Structure.ByReference {
         }
 
-        public static class ByValue extends timeval implements Structure.ByValue {
+        public static abstract class ByValue extends timeval implements Structure.ByValue {
         }
 
         public NativeLong tv_sec;

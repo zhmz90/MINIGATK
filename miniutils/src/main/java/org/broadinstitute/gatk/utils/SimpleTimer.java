@@ -83,12 +83,12 @@ public class SimpleTimer {
      * The elapsedTimeNano time in nanoSeconds of this timer.  The elapsedTimeNano time is the
      * sum of times between starts/restrats and stops.
      */
-    private long elapsedTimeNano = 0l;
+    private long elapsedTimeNano = 0L;
 
     /**
      * The start time of the last start/restart in nanoSeconds
      */
-    private long startTimeNano = 0l;
+    private long startTimeNano = 0L;
 
     /**
      * Is this timer currently running (i.e., the last call was start/restart)
@@ -128,7 +128,7 @@ public class SimpleTimer {
      */
     @Ensures("elapsedTimeNano == 0l")
     public synchronized SimpleTimer start() {
-        elapsedTimeNano = 0l;
+        elapsedTimeNano = 0L;
         return restart();
     }
 
